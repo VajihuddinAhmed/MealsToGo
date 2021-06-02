@@ -27,6 +27,7 @@ export const LoginScreen = ({ navigation }) => {
           label="E-mail"
           value={email}
           textContentType="emailAddress"
+          keyboardType="email-address"
           autoCapitalize="none"
           onChangeText={(u) => setEmail(u)}
         />
