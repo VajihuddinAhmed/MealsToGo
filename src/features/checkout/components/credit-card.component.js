@@ -5,9 +5,8 @@ import { cardTokenRequest } from "../../../services/checkout/checkout.service";
 export const CreditCardInput = ({ name }) => {
   const onChange = async (formData) => {
     const { values, status } = formData;
-    //console.log(formData);
     const isIncomplete = Object.values(status).includes("incomplete");
-    //console.log(isIncomplete);
+    console.log(!isIncomplete);
     const expiry = values.expiry.split("/");
     const card = {
       number: values.number,
@@ -17,7 +16,7 @@ export const CreditCardInput = ({ name }) => {
       name: name,
     };
     const info = await cardTokenRequest(card);
-    //console.log(info);
+    console.log(!info);
   };
 
   return <LiteCreditCardInput onChange={onChange} />;

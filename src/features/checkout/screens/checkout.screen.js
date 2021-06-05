@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { ScrollView } from "react-native";
-import { List } from "react-native-paper";
+import { List, Divider } from "react-native-paper";
 import { Text } from "../../../components/typography/text.component";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { CreditCardInput } from "../components/credit-card.component";
@@ -41,12 +41,17 @@ export const CheckoutScreen = () => {
           <List.Section>
             {cart.map(({ item, price }, i) => {
               return (
-                <List.Item key={i + 1} title={`${item} - €${price / 100}`} />
+                <List.Item
+                  key={`item-${i}`}
+                  title={`${item} - €${price / 100}`}
+                />
               );
             })}
           </List.Section>
           <Text>Total: €{sum / 100}</Text>
         </Spacer>
+        <Spacer position="top" size="large" />
+        <Divider />
         <NameInput
           label="Name"
           value={name}
