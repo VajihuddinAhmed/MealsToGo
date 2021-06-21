@@ -2,7 +2,7 @@
 
 MealsToGo App is a mobile application.
 
-MealsToGo is an online food ordering and delivery platform application, In this application Users can read menus, reviews and ratings, order, and pay for food from participating restaurants using an application on the iOS or Android platforms,
+MealsToGo is an online food ordering and delivery platform application, In this application Users can read menus, order food, view/give reviews and ratings from participating restaurants using an application on the iOS or Android platforms,
 
 This Application is made by using React-Native,
 
